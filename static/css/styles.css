@@ -1304,3 +1304,21 @@ button:disabled {
     opacity: 0;
     pointer-events: none;
 }
+
+/* =====================================================
+   FOOTER
+===================================================== */
+.site-footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    letter-spacing: 0.03em;
+}
+
+body.dark .site-footer {
+    border-color: rgba(255,255,255,0.06);
+}
