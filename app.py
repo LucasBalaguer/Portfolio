@@ -54,6 +54,7 @@ class Project(db.Model):
     results = db.Column(db.Text)
     images = db.Column(db.Text)  # URLs separadas por comas, máx 5
     dashboard_url = db.Column(db.String(300)) 
+    dashboard_url_2 = db.Column(db.String(300))
     
     def __repr__(self):
         return f"<Project {self.title}>"
@@ -623,6 +624,7 @@ def panel_create_project(token):
             results=request.form.get("results"),
             images=collect_images_from_form(),
             dashboard_url=request.form.get("dashboard_url"),
+            dashboard_url_2=request.form.get("dashboard_url_2"),
         ))
         db.session.commit()
         flash("Proyecto creado correctamente")
@@ -649,6 +651,7 @@ def panel_edit_project(token, id):
         project.results = request.form.get("results")
         project.images = collect_images_from_form()
         project.dashboard_url = request.form.get("dashboard_url")
+        project.dashboard_url_2 = request.form.get("dashboard_url_2")
         db.session.commit()
         flash("Proyecto actualizado correctamente")
         return redirect(url_for("panel_dashboard", token=token))

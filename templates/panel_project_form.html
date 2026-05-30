@@ -305,6 +305,14 @@
                 <p class="hint">Si el proyecto tiene un dashboard interactivo, aparecerá un botón "Ver dashboard" en la página del proyecto.</p>
             </div>
 
+            <div class="form-group">
+                <label for="dashboard_url_2">Dashboard URL 2 <span style="font-size:0.6rem;opacity:0.6">(opcional)</span></label>
+                <input type="url" id="dashboard_url_2" name="dashboard_url_2"
+                        value="{{ project.dashboard_url_2 if project else '' }}"
+                        placeholder="https://...">
+                <p class="hint">Segundo dashboard si el proyecto tiene más de uno.</p>
+            </div>
+
             <!-- CONTENIDO DETALLE -->
             <p class="section-divider">Contenido del detalle</p>
 

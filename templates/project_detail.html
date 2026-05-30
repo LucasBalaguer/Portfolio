@@ -110,7 +110,12 @@
     {% endif %}
     {% if project.dashboard_url %}
     <a href="{{ project.dashboard_url }}" target="_blank" class="btn-secondary">
-        Ver dashboard →
+        Ver dashboard Looker Studio →
+    </a>
+    {% endif %}
+    {% if project.dashboard_url_2 %}
+    <a href="{{ project.dashboard_url_2 }}" target="_blank" class="btn-secondary">
+        Ver dashboard Power BI →
     </a>
     {% endif %}
     <a href="{{ url_for('projects') }}" class="btn-secondary">
